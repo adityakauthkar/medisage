@@ -1,0 +1,271 @@
+{
+  "info": {
+    "_postman_id": "0bf705c5-4d37-46bf-8188-d1d8f501eac9",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28583538"
+  },
+  "item": [
+    {
+      "name": "Medisage",
+      "item": [
+        {
+          "name": "addproject",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"web app 1 \"  , \r\n    \"description\" : \"A full stack AI powered wenb app made using MERN stack \" \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/projects/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "projects",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getallprojects",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/projects/projects?page=1&limit=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "projects",
+                "projects"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getprojectbyid",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/projects/project/69da9ed1370d97fe6424e121",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "projects",
+                "project",
+                "69da9ed1370d97fe6424e121"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "createTask",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"add new API \" , \r\n    \"description\" : \"set express server , set .env file \" , \r\n    \"status\": \"todo\" , \r\n    \"priority\": \"medium\" , \r\n    \"due_date\" : \"2026-04-22\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/69da9ed1370d97fe6424e121/tasks",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "69da9ed1370d97fe6424e121",
+                "tasks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetTasksByProjId",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"add new API \" , \r\n    \"description\" : \"set express server , set .env file \" , \r\n    \"status\": \"todo\" , \r\n    \"priority\": \"medium\" , \r\n    \"due_date\" : \"2026-04-22\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/69da9ed1370d97fe6424e121/tasks?status=todo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "69da9ed1370d97fe6424e121",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "todo"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateTaskById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"add new API \" , \r\n    \"description\" : \"set express server , set .env file \" , \r\n    \"status\": \"todo\" , \r\n    \"priority\": \"medium\" , \r\n    \"due_date\" : \"2026-04-22\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/69da9ed1370d97fe6424e121/tasks?status=todo",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "69da9ed1370d97fe6424e121",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "todo"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteTaskById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/tasks/69da9fd0c8ddba253b83e0da",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "tasks",
+                "69da9fd0c8ddba253b83e0da"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
