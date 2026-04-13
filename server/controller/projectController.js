@@ -41,9 +41,9 @@ const getAllProjects = async (req, res) => {
     const projects = await Project.find()
       .skip(skip)
       .limit(limit)
-      .sort({ createdAt: -1 }); // make sure schema has createdAt
+      .sort({ createdAt: -1 }); 
 
-    // 🔥 IMPORTANT: total count
+    // total count
     const total = await Project.countDocuments();
 
     return res.status(200).json({
